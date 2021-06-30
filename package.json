@@ -1,0 +1,31 @@
+{
+	"name": "lunch-buddies",
+	"version": "1.0.0",
+	"description": "Server side API for lunch buddies app",
+	"main": "./src/server.ts",
+	"scripts": {
+		"start": "node --inspect=5858 -r ts-node/register ./src/server.ts",
+		"dev": "nodemon",
+		"build": "tsc",
+		"migrate:users": "cd src/scripts && ts-node createDummyUsers",
+		"test": "cd src/scripts && ts-node test"
+	},
+	"author": "Umair Abbasi",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"class-transformer": "^0.4.0",
+		"class-validator": "^0.13.1",
+		"express": "^4.17.1",
+		"mongoose": "^5.13.0"
+	},
+	"devDependencies": {
+		"@types/body-parser": "^1.19.0",
+		"@types/express": "^4.17.12",
+		"@types/mongoose": "^5.11.97",
+		"@types/node": "^15.12.5",
+		"nodemon": "^2.0.7",
+		"ts-node": "^10.0.0",
+		"typescript": "^4.3.4"
+	}
+}
